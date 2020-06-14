@@ -7,4 +7,6 @@ rec {
     neovim = program "neovim";
     zsh = program "zsh";
   };
+
+  pkgs = import ./nix {};
 }
