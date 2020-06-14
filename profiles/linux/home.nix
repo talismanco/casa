@@ -7,18 +7,16 @@
 { config, lib, pkgs, ... }:
 
 let
-  inherit (builtins) readFile;
-  inherit (lib) mkForce;
-
   config = import ../..;
 in
 
 {
   imports = [ ../common/home.nix ];
 
-  # Linux spedic packages.
+  # Linux specific packages.
   home.packages = with pkgs; [
-
+    # <nixpkgs>
+    # <lunarispkgs>
   ];
 
   ############################################################################

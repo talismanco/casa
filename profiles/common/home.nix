@@ -28,9 +28,17 @@ rec {
   ##                             User packages                              ##
   ############################################################################
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs; with config.pkgs; [
+    # <nixpkgs>
     direnv
     gitAndTools.gitflow
+    # <lunarispkgs>
+    lunarispkgs.bazel
+    lunarispkgs.go
+    lunarispkgs.google-cloud-sdk
+    lunarispkgs.nodejs
+    lunarispkgs.openjdk
+    lunarispkgs.skaffold
   ];
 
 

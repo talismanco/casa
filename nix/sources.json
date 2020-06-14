@@ -1,26 +1,14 @@
 {
-    "niv": {
+    "lunarispkgs": {
         "branch": "master",
-        "description": "Easy dependency management for Nix projects",
-        "homepage": "https://github.com/nmattia/niv",
-        "owner": "nmattia",
-        "repo": "niv",
-        "rev": "f73bf8d584148677b01859677a63191c31911eae",
-        "sha256": "0jlmrx633jvqrqlyhlzpvdrnim128gc81q5psz2lpp2af8p8q9qs",
+        "description": " Nix Packages collection",
+        "homepage": "https://github.com/lunaris-studios/lunarispkgs",
+        "owner": "lunaris-studios",
+        "repo": "lunarispkgs",
+        "rev": "20c79797e24a030e91a6b2f90d68fbf309ad37fb",
+        "sha256": "1wmx6spg4m2y8jss919yxjab2bgac88hs4m24i4jag3x3vp6cz8w",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "nixpkgs": {
-        "branch": "release-19.09",
-        "description": "Nixpkgs/NixOS branches that track the Nixpkgs/NixOS channels",
-        "homepage": null,
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "0a11634a29c1c9ffe7bfa08fc234fef2ee978dbb",
-        "sha256": "0vj5k3djn1wlwabzff1kiiy3vs60qzzqgzjbaiwqxacbvlrci10y",
-        "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/0a11634a29c1c9ffe7bfa08fc234fef2ee978dbb.tar.gz",
+        "url": "https://github.com/lunaris-studios/lunarispkgs/archive/20c79797e24a030e91a6b2f90d68fbf309ad37fb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs-fmt": {
