@@ -16,7 +16,7 @@ available:
 
 ```shell
 $ # clone the latest from master
-$ git clone git@github.com:samcraigdev/casa.git
+$ git clone git@github.com:lunaris-studios/casa.git
 $ # run the initialization script
 $ make init
 ```
