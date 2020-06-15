@@ -10,3 +10,5 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 export SSH_AUTH_SOCK=/tmp/wsl-ssh-pageant.socket
+
+export DIRENV_LOG_FORMAT=""
