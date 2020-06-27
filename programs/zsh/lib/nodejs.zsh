@@ -9,6 +9,10 @@
 export NPM_ROOT=$HOME/.npm
 export PATH=$PATH:$(npm config get prefix)
 
+# NPM
+alias npmrm='rm -rf node_modules package-lock.json'
+alias npmrs='npmrm && npm install'
+
 # Standard Version aliases & functions
 alias sv='standard-version'
 alias svfr='standard-version --first-release'

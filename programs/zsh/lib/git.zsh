@@ -27,7 +27,6 @@ alias gfs='git flow support'
 ## GitHub CLI
 ##
 
-
 # Setup
 export HUB_PROTOCOL=https
 
