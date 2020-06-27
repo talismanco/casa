@@ -10,7 +10,7 @@
 ---
 
 This is the setup that the [Lunaris](https://github.com/lunaris-studios) team uses to maintain identical build / development environments. The installation process is very
-simple and allows for anyone to bootstrap and new development environment on any new machine in a matter of
+simple and allows for anyone to bootstrap a new development environment on any new machine in a matter of
 seconds. The following is run on a pristine Ubuntu machine with `git`, `curl` and `make`
 available:
 
