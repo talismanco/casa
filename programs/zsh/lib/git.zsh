@@ -2,7 +2,6 @@
 # Git Aliases #
 ###############
 
-# 
 alias glgs='glg --show-signature'
 alias glol="git log --graph --pretty=format:'%Cgreen%G?%Creset %C(yellow)%h%Creset - %s%C(auto)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glola='glol --all'
