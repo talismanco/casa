@@ -2,7 +2,7 @@
 source $ZDOTDIR/lib/vars.zsh
 
 # Initialize themes
-# source $ZDOTDIR/lib/themes/p10k.zsh
+source $ZDOTDIR/lib/themes/p10k.zsh
 source $ZDOTDIR/lib/themes/zsh-autosuggestions.zsh
 
 source $ZDOTDIR/.zsh_plugins.sh
