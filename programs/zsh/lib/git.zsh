@@ -2,6 +2,7 @@
 # Git Aliases #
 ###############
 
+# 
 alias glgs='glg --show-signature'
 alias glol="git log --graph --pretty=format:'%Cgreen%G?%Creset %C(yellow)%h%Creset - %s%C(auto)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glola='glol --all'
@@ -13,11 +14,18 @@ alias grbp='git rebase -p'
 alias gli='git clean -dxn -e ".direnv/" -e "/config/"'
 alias gclean='git clean -idx -e ".direnv/" -e "/config/"'
 alias gs='git status'
+alias gc='git checkout'
+
+# git-flow
+alias gf='git flow'
+alias gff='git flow feature'
+alias gfr='git flow release'
+alias gfh='git flow hotfix'
+alias gfs='git flow support'
 
 ##
 ## GitHub CLI
 ##
-
 
 # Setup
 export HUB_PROTOCOL=https

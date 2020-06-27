@@ -1,6 +1,6 @@
 ####### Configuration for Neovim ##################################################
 ##                                                                               ##
-## * Foo                                                                         ##
+## * Enable `vi` & `vim` aliases                                                 ##
 ##                                                                               ##
 ###################################################################################
 
@@ -10,7 +10,6 @@ let
   inherit (builtins) readFile;
   inherit (lib) mkDefault;
 
-  config = import ../..;
   plugins = pkgs.vimPlugins // pkgs.callPackage ./plugins.nix {};
 in {
   programs.neovim = {
@@ -18,11 +17,8 @@ in {
     viAlias = mkDefault true;
     vimAlias = mkDefault true;
     configure = {
-      customRC = readFile ../config/vimrc;
-      plug.plugins = with plugins; [
-        # Themes
-        onedark-vim
-      ];
+      customRC = readFile ./config/vimrc;
+      plug.plugins = with plugins; [];
     };
   };
 }

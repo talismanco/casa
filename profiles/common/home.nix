@@ -21,7 +21,10 @@ rec {
 
   imports = with config.programs; [
     git
+    jq
     neovim
+    tmux
+    zsh
   ];
 
   ############################################################################
@@ -30,12 +33,16 @@ rec {
 
   home.packages = with pkgs; with config.pkgs; [
     # <nixpkgs>
+    antibody
     direnv
     gitAndTools.gitflow
+    vimPlugins.vim-plug
     # <lunarispkgs>
     lunarispkgs.bazel
     lunarispkgs.go
     lunarispkgs.google-cloud-sdk
+    lunarispkgs.helm
+    lunarispkgs.k9s
     lunarispkgs.nodejs
     lunarispkgs.openjdk
     lunarispkgs.skaffold
@@ -56,7 +63,7 @@ rec {
       '' + readFile (config.file "config/gpg.conf");
 
     # zsh aliases, environments, themes & functions
-    ".zsh".source = config.file "programs/zsh/lib";
+    ".config/zsh/lib".source = config.file "programs/zsh/lib";
 
     # ssh config
     ".ssh".source = config.file "programs/ssh/config";
@@ -68,21 +75,6 @@ rec {
 
   programs.home-manager = {
     enable = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-    initExtra = 
-      mkForce (''
-        if [ -z "$IN_NIX_SHELL" ]; then
-            source ${pkgs.antigen}/share/antigen/antigen.zsh
-            source $HOME/.nix-profile/etc/profile.d/nix.sh
-            export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
-        fi
-      '' +
-      readFile (config.file "programs/zsh/bin/before.zsh")
-      + "\n" +
-      readFile (config.file "programs/zsh/bin/after.zsh"));
   };
 
   ############################################################################

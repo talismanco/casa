@@ -22,7 +22,17 @@ alias unxz='unxz -kv'
 
 # Home Manager
 alias hm='home-manager'
-alias hms='home-manager switch'
+alias hms='home-manager switch && zsh'
 
 # VSCode
 alias code='code-insiders'
+
+# Display available color spectrum
+function clicolors() {
+    for i in {0..255}; do;
+        print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
+    done;
+}
+
+# Antibody
+alias au='antibody bundle < $ZDOTDIR/lib/plugins.txt > ~/.zsh_plugins.sh && zsh'
