@@ -4,8 +4,9 @@
 
 declare -A organizations
 
-organizations[sc]="sam.craig"
 organizations[l]="lunaris"
+organizations[m]="misc"
+organizations[sc]="sam.craig"
 organizations[v]="vaynerx"
 
 # Navigate to the project in the designated organization,
