@@ -58,6 +58,7 @@ alias hgen='home-manager generations'
 alias l='lorri'
 alias ld='lorri daemon'
 alias lw='lorri watch'
+alias lwo='lorri watch --once'
 
 # NixOS rebuild
 alias snors="sudo su -c \"\
