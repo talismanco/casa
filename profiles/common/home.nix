@@ -9,8 +9,13 @@
 , ... }:
 
 let
-  inherit (builtins) readFile;
-  inherit (lib) mkDefault mkForce;
+  inherit (builtins) 
+    readFile
+  ;
+  inherit (lib) 
+    mkDefault 
+    mkForce
+  ;
 
   config = import ../..;
 in

@@ -6,7 +6,7 @@
 
 { pkgs
 , lib
-}:
+, ... }:
 
 let
   inherit (lib)
