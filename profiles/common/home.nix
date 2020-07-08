@@ -23,6 +23,7 @@ rec {
     git
     jq
     neovim
+    ssh
     tmux
     zsh
   ];
@@ -72,12 +73,6 @@ rec {
 
   programs.home-manager = {
     enable = true;
-  };
-
-  programs.ssh = {
-    enable = true; 
-    compression = true;
-    extraConfig = readFile (config.file "programs/ssh/config/config");
   };
 
   programs.keychain = {
