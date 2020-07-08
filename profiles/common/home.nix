@@ -24,6 +24,7 @@ rec {
   imports = with config.programs; [
     git
     jq
+    keychain
     neovim
     ssh
     tmux
