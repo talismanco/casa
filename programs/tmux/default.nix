@@ -4,11 +4,15 @@
 ##                                                                               ##
 ###################################################################################
 
-{ config, lib, pkgs, ... }:
+{ config
+, lib
+, pkgs
+, ... }:
 
 let
   config = import ../..;
-in {
+in 
+rec {
   programs.tmux = {
     enable = true;
     keyMode = "vi";

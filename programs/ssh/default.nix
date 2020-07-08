@@ -22,12 +22,12 @@ let
     stdenv
   ;
 
-  config = import "../..";
+  config = import ../..;
 in
-{
+rec {
   programs.ssh = {
     enable = true; 
-    compression = true;
-    extraConfig = readFile (config.file "programs/ssh/config/config");
+    compression = mkDefault true;
+    extraConfig = mkDefault readFile (config.file "programs/ssh/config/config");
   };
 }

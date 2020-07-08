@@ -4,13 +4,15 @@
 ##                                                                            ##
 ################################################################################
 
-{ config, lib, pkgs, ... }:
+{ config
+, lib
+, pkgs
+, ... }:
 
 let
   config = import ../..;
 in
-
-{
+rec {
   imports = [ ../common/home.nix ];
 
   # Linux specific packages.
