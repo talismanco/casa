@@ -64,9 +64,6 @@ rec {
 
     # zsh aliases, environments, themes & functions
     ".config/zsh/lib".source = config.file "programs/zsh/lib";
-
-    # ssh config
-    ".ssh".source = config.file "programs/ssh/config";
   };
 
   ############################################################################
@@ -75,6 +72,17 @@ rec {
 
   programs.home-manager = {
     enable = true;
+  };
+
+  programs.ssh = {
+    enable = true; 
+    compression = true;
+    extraConfig = readFile (config.file "programs/ssh/config/config");
+  };
+
+  programs.keychain = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   ############################################################################

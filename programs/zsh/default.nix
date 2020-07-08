@@ -20,7 +20,7 @@ in
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    initExtra = 
+    initExtraBeforeCompInit  = 
       mkForce (
         ''
         if [ -z "$IN_NIX_SHELL" ]; then
