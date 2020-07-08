@@ -11,7 +11,8 @@ export EDITOR=$VISUAL
 
 export SSH_DIR=$HOME/.ssh
 export SSH_AUTH_SOCK=/tmp/wsl-ssh-pageant.socket
-export SSH_IDENTITY=sam.lunaris.io
+export IDENTITIES_DIR=$HOME/.identities
+
 export DIRENV_LOG_FORMAT=""
 
 export GOPATH=$HOME/go

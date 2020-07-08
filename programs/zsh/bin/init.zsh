@@ -7,6 +7,9 @@ source $ZDOTDIR/lib/themes/zsh-autosuggestions.zsh
 
 source $ZDOTDIR/.zsh_plugins.sh
 
+# Symlink all identities to `.ssh` directory
+ln -s $IDENTITIES_DIR/* $SSH_DIR && ls -l $SSH_DIR
+
 function export_local_bin() {
     if [ -z "$IN_NIX_SHELL" ]; then
         export PATH=$HOME/.local/bin:$PATH
@@ -19,8 +22,6 @@ for script ($ZDOTDIR/lib/*.zsh); do
     source $script
 done
 unset script
-
-export_local_bin
 
 # direnv shell hook
 eval "$(direnv hook zsh)"
