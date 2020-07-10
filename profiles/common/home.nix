@@ -52,6 +52,7 @@ rec {
     lunarispkgs.google-cloud-sdk
     lunarispkgs.helm
     lunarispkgs.k9s
+    lunarispkgs.mirror
     lunarispkgs.nodejs
     lunarispkgs.openjdk
     lunarispkgs.skaffold
