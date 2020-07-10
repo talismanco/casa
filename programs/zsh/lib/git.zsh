@@ -14,6 +14,8 @@ alias gli='git clean -dxn -e ".direnv/" -e "/config/"'
 alias gclean='git clean -idx -e ".direnv/" -e "/config/"'
 alias gs='git status'
 alias gc='git checkout'
+alias ga='git add'
+alias gaa='git add --all'
 
 # git-flow
 alias gf='git flow'
