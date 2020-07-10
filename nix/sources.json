@@ -5,22 +5,34 @@
         "homepage": "https://github.com/lunaris-studios/lunarispkgs",
         "owner": "lunaris-studios",
         "repo": "lunarispkgs",
-        "rev": "2cf3e8b11052cffdb26050f09ad6ebe29eb3ab34",
-        "sha256": "1symh05dib44n8q1gqzx3pkh7jqag5izd1q4ilw1r61z4s6xpijh",
+        "rev": "cc15975aab66a6c71934fd28912bc93776937545",
+        "sha256": "0jsnyjplg0ghnhfidii9bqhz1xg4p2dwzya1bhb0xnxc4ycrxkin",
         "type": "tarball",
-        "url": "https://github.com/lunaris-studios/lunarispkgs/archive/2cf3e8b11052cffdb26050f09ad6ebe29eb3ab34.tar.gz",
+        "url": "https://github.com/lunaris-studios/lunarispkgs/archive/cc15975aab66a6c71934fd28912bc93776937545.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "nixpkgs-fmt": {
+    "niv": {
         "branch": "master",
-        "description": "Nix code formatter for nixpkgs [maintainer=@zimbatm]",
-        "homepage": "https://nix-community.github.io/nixpkgs-fmt/",
-        "owner": "nix-community",
-        "repo": "nixpkgs-fmt",
-        "rev": "ed5928b79673249fc3f850a29bd5f57fbf02007f",
-        "sha256": "1mm0arrxrla3s2jq773b3hbif5amyna3m3lh291p23rrvx4w5m58",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "c27f5a6c57de4495045450b6587d4a2c489851c8",
+        "sha256": "064lyr1661pk7hh7npgxsmk4cni9bc34hb2d6r76qp4cs2hcazim",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nixpkgs-fmt/archive/ed5928b79673249fc3f850a29bd5f57fbf02007f.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/c27f5a6c57de4495045450b6587d4a2c489851c8.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-19.09",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "289466dd6a11c65a7de4a954d6ebf66c1ad07652",
+        "sha256": "0r5ja052s86fr54fm1zlhld3fwawz2w1d1gd6vbvpjrpjfyajibn",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/289466dd6a11c65a7de4a954d6ebf66c1ad07652.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
