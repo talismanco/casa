@@ -4,11 +4,18 @@
 ##                                                                            ##
 ################################################################################
 
-{ pkgs, lib, ... }:
+{ lib
+, pkgs
+, ... }:
 
 let
-  inherit (builtins) readFile;
-  inherit (lib) mkDefault mkForce;
+  inherit (builtins) 
+    readFile
+  ;
+  inherit (lib) 
+    mkDefault 
+    mkForce
+  ;
 
   config = import ../..;
 in
@@ -22,7 +29,9 @@ rec {
   imports = with config.programs; [
     git
     jq
+    keychain
     neovim
+    ssh
     tmux
     zsh
   ];
@@ -43,6 +52,7 @@ rec {
     lunarispkgs.google-cloud-sdk
     lunarispkgs.helm
     lunarispkgs.k9s
+    lunarispkgs.mirror
     lunarispkgs.nodejs
     lunarispkgs.openjdk
     lunarispkgs.skaffold
@@ -64,14 +74,7 @@ rec {
 
     # zsh aliases, environments, themes & functions
     ".config/zsh/lib".source = config.file "programs/zsh/lib";
-
-    # ssh config
-    ".ssh".source = config.file "programs/ssh/config";
   };
-
-  ############################################################################
-  ##                                 Programs                               ##
-  ############################################################################
 
   programs.home-manager = {
     enable = true;

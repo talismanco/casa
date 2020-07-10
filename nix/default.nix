@@ -1,4 +1,13 @@
-{ sources ? import ./sources.nix }: {
+{ sources ? import ./sources.nix }:
+let
+  overlay = _: pkgs: { 
+    inherit (import sources.niv {}) niv;
+  };
+in
+rec {
   lunarispkgs = import sources.lunarispkgs;
-  nixpkgs-fmt = import sources.nixpkgs-fmt {};
+  nixpkgs = import sources.nixpkgs {
+    overlays = [ overlay ]; 
+    config = {};
+  };
 }

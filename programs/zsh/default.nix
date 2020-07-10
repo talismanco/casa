@@ -1,26 +1,31 @@
 ####### Configuration for Zsh ##################################################
 ##                                                                            ##
-## * No beeps                                                                 ##
-## * Prompt like `[user@host.domain]:/path %` in green, and red for root      ##
-## * 10 000 lines history in `~/.zsh_history` without immediate duplicates    ##
-## * Correct UTF-8 handling on macOS                                          ##
+## * Setup `ZSH_DOTDIR` at `~/.config/zsh`                                    ##
 ##                                                                            ##
 ################################################################################
 
-{ lib, pkgs, ... }:
+{ lib
+, pkgs
+, ... }:
 
 let
-  inherit (builtins) readFile;
-  inherit (lib) mkDefault mkForce optionalString;
-  inherit (pkgs) stdenv;
-
-  config = import "../..";
+  inherit (builtins) 
+    readFile
+  ;
+  inherit (lib) 
+    mkDefault 
+    mkForce 
+    optionalString
+  ;
+  inherit (pkgs) 
+    stdenv
+  ;
 in
-{
+rec {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    initExtra = 
+    initExtraBeforeCompInit  = 
       mkForce (
         ''
         if [ -z "$IN_NIX_SHELL" ]; then

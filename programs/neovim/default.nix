@@ -1,6 +1,7 @@
 ####### Configuration for Neovim ##################################################
 ##                                                                               ##
 ## * Enable `vi` & `vim` aliases                                                 ##
+## * Initiate .vimrc via `config/vimrc`                                          ##
 ##                                                                               ##
 ###################################################################################
 
@@ -11,7 +12,8 @@ let
   inherit (lib) mkDefault;
 
   plugins = pkgs.vimPlugins // pkgs.callPackage ./plugins.nix {};
-in {
+in 
+rec {
   programs.neovim = {
     enable = true;
     viAlias = mkDefault true;

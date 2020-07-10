@@ -5,7 +5,9 @@ rec {
   programs = {
     git = program "git";
     jq = program "jq";
+    keychain = program "keychain";
     neovim = program "neovim";
+    ssh = program "ssh";
     tmux = program "tmux";
     zsh = program "zsh";
   };
