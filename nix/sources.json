@@ -5,10 +5,10 @@
         "homepage": "https://github.com/lunaris-studios/lunarispkgs",
         "owner": "lunaris-studios",
         "repo": "lunarispkgs",
-        "rev": "cc15975aab66a6c71934fd28912bc93776937545",
-        "sha256": "0jsnyjplg0ghnhfidii9bqhz1xg4p2dwzya1bhb0xnxc4ycrxkin",
+        "rev": "377621009ef9b6e7d488b98c25c451643cd8b726",
+        "sha256": "0dfvcdxbq9chs14yvd54vy2c8k884a5vcprl048gjbjv9gvlpj7l",
         "type": "tarball",
-        "url": "https://github.com/lunaris-studios/lunarispkgs/archive/cc15975aab66a6c71934fd28912bc93776937545.tar.gz",
+        "url": "https://github.com/lunaris-studios/lunarispkgs/archive/377621009ef9b6e7d488b98c25c451643cd8b726.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -17,10 +17,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "c27f5a6c57de4495045450b6587d4a2c489851c8",
-        "sha256": "064lyr1661pk7hh7npgxsmk4cni9bc34hb2d6r76qp4cs2hcazim",
+        "rev": "ab9cc41caf44d1f1d465d8028e4bc0096fd73238",
+        "sha256": "17k52n8zwp832cqifsc4458mhy4044wmk22f807171hf6p7l4xvr",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/c27f5a6c57de4495045450b6587d4a2c489851c8.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/ab9cc41caf44d1f1d465d8028e4bc0096fd73238.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {

@@ -7,9 +7,11 @@
 ##
 
 export NPM_ROOT=$HOME/.npm
-export PATH=$PATH:$(npm config get prefix)
+export NPM_BIN=$NPM_ROOT/bin
 
-# NPM
+export PATH=$PATH:$NPM_BIN
+
+# NPM aliases
 alias npmrm='rm -rf node_modules package-lock.json'
 alias npmrs='npmrm && npm install'
 

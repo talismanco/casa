@@ -48,6 +48,8 @@ rec {
     vimPlugins.vim-plug
     # <lunarispkgs>
     lunarispkgs.bazel
+    lunarispkgs.cargo
+    lunarispkgs.clippy
     lunarispkgs.go
     lunarispkgs.google-cloud-sdk
     lunarispkgs.helm
@@ -55,6 +57,7 @@ rec {
     lunarispkgs.mirror
     lunarispkgs.nodejs
     lunarispkgs.openjdk
+    lunarispkgs.rustc
     lunarispkgs.skaffold
   ];
 
