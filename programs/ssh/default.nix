@@ -28,6 +28,6 @@ rec {
   programs.ssh = {
     enable = true; 
     compression = mkDefault true;
-    extraConfig = mkDefault (readFile (config.file "programs/ssh/config/config"));
+    extraConfig = mkDefault (readFile (config.file "config/ss."));
   };
 }
