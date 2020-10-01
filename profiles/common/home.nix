@@ -45,6 +45,8 @@ rec {
     antibody
     direnv
     gitAndTools.gitflow
+    ngrok
+    vault
     vimPlugins.vim-plug
     # <lunarispkgs>
     lunarispkgs.bazel
