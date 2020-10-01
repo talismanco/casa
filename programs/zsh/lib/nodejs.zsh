@@ -9,6 +9,9 @@
 export NPM_ROOT=$HOME/.npm
 export NPM_BIN=$NPM_ROOT/bin
 
+# npm config
+export npm_config_prefix=$NPM_ROOT
+
 export PATH=$PATH:$NPM_BIN
 
 # NPM aliases
