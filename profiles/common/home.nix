@@ -67,9 +67,6 @@ rec {
   ############################################################################
 
   home.file = {
-    # npm config
-    ".npmrc".source = config.file "config/.npmrc";
-
     # gnupg config
     ".gnupg/gpg.conf".text = ''
         default-key <fpr>
