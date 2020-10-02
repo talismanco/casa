@@ -8,7 +8,11 @@ source $ZDOTDIR/lib/themes/zsh-autosuggestions.zsh
 source $ZDOTDIR/.zsh_plugins.sh
 
 # Symlink all identities to `.ssh` directory
-ln -s $IDENTITIES_DIR/* $SSH_DIR && ls -l $SSH_DIR
+# Run in sub-shell nullify output to mute,
+# failed symlinks.
+{
+    ln -s $IDENTITIES_DIR/* $SSH_DIR && ls -l $SSH_DIR
+} &> /dev/null
 
 function export_local_bin() {
     if [ -z "$IN_NIX_SHELL" ]; then
