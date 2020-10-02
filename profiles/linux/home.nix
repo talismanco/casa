@@ -18,7 +18,9 @@ rec {
   # Linux specific packages.
   home.packages = with pkgs; [
     # <nixpkgs>
+    # ...
     # <lunarispkgs>
+    # ...
   ];
 
   ############################################################################
