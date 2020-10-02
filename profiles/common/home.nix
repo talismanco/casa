@@ -44,6 +44,7 @@ rec {
     # <nixpkgs>
     antibody
     direnv
+    gitAndTools.gh
     gitAndTools.gitflow
     ngrok
     vault
