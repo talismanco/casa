@@ -19,7 +19,7 @@ alias doip='docker image prune'
 alias doib='docker image build'
 alias doilo='docker image load'
 alias dois='docker image save'
-alias drm='docker system prune -a f'
+alias drm='docker system prune --all --force'
 
 # Docker container management
 alias docl='docker container ls'
