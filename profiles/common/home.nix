@@ -46,6 +46,7 @@ rec {
     direnv
     gitAndTools.gh
     gitAndTools.gitflow
+    glow
     ngrok
     vault
     vimPlugins.vim-plug
@@ -63,7 +64,6 @@ rec {
     lunarispkgs.rustc
     lunarispkgs.skaffold
   ];
-
 
   ############################################################################
   ##                          Custom configuration                          ##
