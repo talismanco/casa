@@ -6,6 +6,7 @@ declare -A organizations
 
 organizations[l]="lunaris"
 organizations[m]="misc"
+organizations[mir]="mirror"
 organizations[sc]="sam.craig"
 organizations[v]="vaynerx"
 
@@ -13,6 +14,6 @@ organizations[v]="vaynerx"
 function bd() {
 	local organization=$organizations[$1]
 	local project=$2
-	
+
 	cd $HOME/builds/${organization}/${project}
 }
