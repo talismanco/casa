@@ -1,11 +1,3 @@
-.PHONY: init
-init:
-	@$(MAKE) script SCRIPT=init
-
-.PHONY: script
-script:
-	@. ./script/$(SCRIPT)
-
 # MAKEFILE
 #
 # @author      Sam Craig <sam@lunaris.io>
@@ -29,27 +21,34 @@ help:
 	@echo "    make update-npm : Update npm dependencies"
 	@echo ""
 
-# Alias for help target
 all: help
-	@$(MAKE) -s ".env.yaml"
 
 # === Entities ===
 
 # URL of the remote repository
-REPOSITORY := https://github.com/lunaris-studios/mirror-template
+REPOSITORY := $$PROJECT_REPOSITORY
 
 # Project owner
-OWNER := lunaris-studios
+OWNER := $$PROJECT_OWNER
 
 # Project name
-PROJECT := mirror-template
+PROJECT := $$PROJECT_NAME
 
 # Project version
-VERSION := 1.0.1
+VERSION := $$PROJECT_VERSION
+
+# Project commit hash
+COMMIT := $(shell git rev-parse HEAD)
+
+# Project vendor
+VENDOR := $(NAME)-vendor
+
+# Name of RPM or DEB package
+PKGNAME := $(VENDOR)-$(NAME)
 
 # === Shell Configuration ===
 
-SHELL := /bin/bash
+SHELL := $(shell which bash)
 
 UNAME_OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
 UNAME_ARCH := $(shell uname -m | tr '[:upper:]' '[:lower:]')
@@ -59,12 +58,49 @@ TMP := $(TMP_BASE)
 TMP_BIN = $(TMP)/bin
 TMP_VERSIONS := $(TMP)/versions
 
+# === Environment ===
+
+STAGE ?= development
+
+ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+CONFIG_DIR := $(ROOT_DIR)/config
+SETTINGS_DIR := $(CONFIG_DIR)/settings
+TARGET_DIR := $(ROOT_DIR)/target
+
+# Combine the active project stage configuration settings
+# with the included `global.json` configuartion settings.
+STAGE_SETTINGS := $(SETTINGS_DIR)/$(STAGE).json
+GLOBAL_SETTINGS := $(SETTINGS_DIR)/global.json
+
+export PATH := $(PATH):$(TARGET_DIR)
+
+.PHONY: .env.json
+.env.json:
+	@jq -s '.[0] * .[1]' $(STAGE_SETTINGS) $(GLOBAL_SETTINGS) > .env.json
+
+# Export `.tool-versions` entries as environment variables
+# with the pattern "<DEPENDENCY_NAME>_VERSION=<DEPENDENCY_VERSION>"
+# to the temp file `.tool-versiions.env`
+include .tool-versions.env
+.PHONY: .tool-versions.env
+.tool-versions.env: .tool-versions
+	@(sed -e 's/\(.*\)\ \(.*\)/\1_VERSION=\2/g' | tr '[:lower:]' '[:upper:]') < $< > $@
+
+include .env
+.PHONY: .env
+.env: .env.json
+	@(python ./scripts/python/jsontoenv.py) < $< > $@
+
+.PHONY: .env.yaml
+.env.yaml: .env.json
+	@(python ./scripts/python/jsontoyaml.py) < $< > $@
+
 # === Init ===
 
 # Initialize casa
 .PHONY: init
 init:
-	@. ./script/init
+	@. ./script/bash/init
 
 # === Update ===
 

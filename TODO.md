@@ -1,4 +1,4 @@
-- [x] Implement `lunarispkgs` to niv sources
+- [x] Implement `toyboxpkgs` to niv sources
 - [ ] Add macOS profile
 - [ ] Clean up `docs`
 - [ ] Refactor `README.md`

@@ -1,16 +1,4 @@
 {
-    "lunarispkgs": {
-        "branch": "master",
-        "description": " Nix Packages collection",
-        "homepage": "https://github.com/lunaris-studios/lunarispkgs",
-        "owner": "lunaris-studios",
-        "repo": "lunarispkgs",
-        "rev": "377621009ef9b6e7d488b98c25c451643cd8b726",
-        "sha256": "0dfvcdxbq9chs14yvd54vy2c8k884a5vcprl048gjbjv9gvlpj7l",
-        "type": "tarball",
-        "url": "https://github.com/lunaris-studios/lunarispkgs/archive/377621009ef9b6e7d488b98c25c451643cd8b726.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
@@ -34,5 +22,18 @@
         "type": "tarball",
         "url": "https://github.com/NixOS/nixpkgs/archive/0cfe5377e8993052f9b0dd56d058f8008af45bd9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "toyboxpkgs": {
+        "branch": "master",
+        "description": " Nix Packages collection",
+        "homepage": "https://github.com/toyboxco/toyboxpkgs",
+        "owner": "toyboxco",
+        "repo": "toyboxpkgs",
+        "rev": "f31e117d8e019b2f158327248f03eca0956a60c2",
+        "sha256": "0svlxgvynkj515a24qq0q6dmrir9n6jn003h2q4pqwp5dll7qqsd",
+        "type": "tarball",
+        "url": "https://github.com/toyboxco/toyboxpkgs/archive/f31e117d8e019b2f158327248f03eca0956a60c2.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
+

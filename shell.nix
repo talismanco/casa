@@ -1,7 +1,7 @@
 { sources ? import ./nix {} }:
 let
   inherit (sources)
-    lunarispkgs
+    toyboxpkgs
     nixpkgs
   ;
 in
@@ -9,9 +9,11 @@ nixpkgs.mkShell rec {
   name = "casa";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-    # <lunarispkgs>
-    # ...
+    # <toyboxpkgs>
+    toyboxpkgs.jq_1_6
+    toyboxpkgs.nodejs_12_18_3
+    toyboxpkgs.python_3_7_7
     # <nixpkgs>
-    nixpkgs.pkgs.niv
+    # ...
   ];
 }

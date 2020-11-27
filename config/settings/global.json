@@ -1,0 +1,10 @@
+{
+	"project": {
+    "owner": "Toybox Labs, LLC.",
+		"name": "casa",
+    "organization": "toyboxco",
+    "repository": "https://github.com/toyboxco/casa",
+    "version": "1.1.1",
+    "nixpkgs_channel": "nixos-20.09"
+	}
+}
