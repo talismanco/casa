@@ -1,7 +1,7 @@
 # MAKEFILE
 #
-# @author      Sam Craig <sam@lunaris.io>
-# @link        https://github.com/lunaris-studios/casa
+# @author      Sam Craig <sam@toybox.ooo>
+# @link        https://github.com/toyboxco/casa
 # ------------------------------------------------------------------------------
 
 .EXPORT_ALL_VARIABLES:
@@ -100,7 +100,7 @@ include .env
 # Initialize casa
 .PHONY: init
 init:
-	@. ./script/bash/init
+	@. ./scripts/bash/init.sh
 
 # === Update ===
 

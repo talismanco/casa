@@ -9,16 +9,16 @@
 
 ---
 
-This is the setup that the [Lunaris](https://github.com/lunaris-studios) team uses to maintain identical build / development environments. The installation process is very
+This is the setup that the [Toybox Labs](https://github.com/toyboxco) team uses to maintain identical build / development environments. The installation process is very
 simple and allows for anyone to bootstrap a new development environment on any new machine in a matter of
 seconds. The following is run on a pristine Ubuntu machine with `git`, `curl` and `make`
 available:
 
 ```shell
-$ # clone the latest from master
-$ git clone git@github.com:lunaris-studios/casa.git
-$ # run the initialization script
-$ make init
+  # clone the latest from master
+  git clone git@github.com:toyboxco/casa.git
+  # run the initialization script
+  make init
 ```
 
 This will bootstrap `Nix` and `home-manager`, and install the respective profile for your operating system. **_Casa_** will be available in all subsequent shells, including the
