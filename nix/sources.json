@@ -5,10 +5,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "29ddaaf4e099c3ac0647f5b652469dfc79cd3b53",
-        "sha256": "1va6myp07gkspgxfch8z3rs9nyvys6jmgzkys6a2c4j09qxp1bs0",
+        "rev": "ba57d5a29b4e0f2085917010380ef3ddc3cf380f",
+        "sha256": "1kpsvc53x821cmjg1khvp1nz7906gczq8mp83664cr15h94sh8i4",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/29ddaaf4e099c3ac0647f5b652469dfc79cd3b53.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/ba57d5a29b4e0f2085917010380ef3ddc3cf380f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -17,10 +17,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0cfe5377e8993052f9b0dd56d058f8008af45bd9",
-        "sha256": "0i3ybddi2mrlaz3di3svdpgy93zwmdglpywih4s9rd3wj865gzn1",
+        "rev": "2fbcd0b9df95306199407e36a038d2cc3aa24786",
+        "sha256": "1q51cc51vv02yibj6dwaqp7zv3pz1iqnbzlvmv2fks6pj58xv03w",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/0cfe5377e8993052f9b0dd56d058f8008af45bd9.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/2fbcd0b9df95306199407e36a038d2cc3aa24786.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "toyboxpkgs": {
@@ -29,11 +29,10 @@
         "homepage": "https://github.com/toyboxco/toyboxpkgs",
         "owner": "toyboxco",
         "repo": "toyboxpkgs",
-        "rev": "f31e117d8e019b2f158327248f03eca0956a60c2",
-        "sha256": "0svlxgvynkj515a24qq0q6dmrir9n6jn003h2q4pqwp5dll7qqsd",
+        "rev": "6721b5471eeda3549408ccc6b2439e9ae3319c27",
+        "sha256": "1c48y51gg9727qysvx26hcplwcgnx0a35zgr5d5z1jvjspywqhvb",
         "type": "tarball",
-        "url": "https://github.com/toyboxco/toyboxpkgs/archive/f31e117d8e019b2f158327248f03eca0956a60c2.tar.gz",
+        "url": "https://github.com/toyboxco/toyboxpkgs/archive/6721b5471eeda3549408ccc6b2439e9ae3319c27.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
-
