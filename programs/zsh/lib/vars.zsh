@@ -18,3 +18,5 @@ export DIRENV_LOG_FORMAT=""
 export GOPATH=$HOME/go
 
 export PATH=$PATH:$GOPATH/bin
+
+export GOOGLE_CLOUD_PROJECT=$(gcloud config get-value project)

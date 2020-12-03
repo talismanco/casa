@@ -16,6 +16,9 @@ alias gs='git status'
 alias gc='git checkout'
 alias ga='git add'
 alias gaa='git add --all'
+alias gtlrm='git tag -d $(git tag -l)'
+alias gtrrm='git fetch && git push origin --delete $(git tag -l)'
+alias gtrm='gtrrm && gtlrm'
 
 # git-flow
 alias gf='git flow'

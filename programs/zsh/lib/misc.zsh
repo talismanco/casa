@@ -24,9 +24,6 @@ alias unxz='unxz -kv'
 alias hm='home-manager'
 alias hms='home-manager switch && zsh'
 
-# VSCode
-alias code='code-insiders'
-
 # Display available color spectrum
 function clicolors() {
     for i in {0..255}; do;

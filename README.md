@@ -9,19 +9,19 @@
 
 ---
 
-This is the setup that the [Lunaris](https://github.com/lunaris-studios) team uses to maintain identical build / development environments. The installation process is very
+This is the setup that the [Toybox Labs](https://github.com/toyboxco) team uses to maintain identical build / development environments. The installation process is very
 simple and allows for anyone to bootstrap a new development environment on any new machine in a matter of
 seconds. The following is run on a pristine Ubuntu machine with `git`, `curl` and `make`
 available:
 
 ```shell
-$ # clone the latest from master
-$ git clone git@github.com:lunaris-studios/casa.git
-$ # run the initialization script
-$ make init
+  # clone the latest from master
+  git clone git@github.com:toyboxco/casa.git
+  # run the initialization script
+  make init
 ```
 
-This will bootstrap `Nix` and `home-manager`, and install the respective profile for your operating system. ***Casa*** will be available in all subsequent shells, including the
+This will bootstrap `Nix` and `home-manager`, and install the respective profile for your operating system. **_Casa_** will be available in all subsequent shells, including the
 customizations (vim with my favorite plugins, tmux with my customized
 configuration, etc).
 
@@ -35,25 +35,25 @@ $ home-manager switch
 
 Listing the currently installed packages:
 
-``` shell
+```shell
 $ home-manager packages
 ```
 
 Listing the previous and current configurations:
 
-``` shell
+```shell
 $ home-manager generations
 ```
 
 Deleting old configurations by ID:
 
-``` shell
+```shell
 $ home-manager remove-generations [3 | 3 4 9]
 ```
 
 Deleting old configurations by timestamps:
 
-``` shell
+```shell
 $ home-manager expire-generations [-30 days | 2018-01-01]
 ```
 

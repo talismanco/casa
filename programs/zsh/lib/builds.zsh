@@ -4,15 +4,16 @@
 
 declare -A organizations
 
-organizations[l]="lunaris"
 organizations[m]="misc"
+organizations[mir]="mirror"
 organizations[sc]="sam.craig"
+organizations[t]="toybox"
 organizations[v]="vaynerx"
 
 # Navigate to the project in the designated organization,
 function bd() {
 	local organization=$organizations[$1]
 	local project=$2
-	
+
 	cd $HOME/builds/${organization}/${project}
 }

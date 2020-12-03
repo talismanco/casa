@@ -44,29 +44,32 @@ rec {
     # <nixpkgs>
     antibody
     direnv
+    gitAndTools.gh
     gitAndTools.gitflow
+    glow
+    ngrok
+    vault
     vimPlugins.vim-plug
-    # <lunarispkgs>
-    lunarispkgs.bazel
-    lunarispkgs.go
-    lunarispkgs.google-cloud-sdk
-    lunarispkgs.helm
-    lunarispkgs.k9s
-    lunarispkgs.mirror
-    lunarispkgs.nodejs
-    lunarispkgs.openjdk
-    lunarispkgs.skaffold
+    # <toyboxpkgs>
+    toyboxpkgs.bazel
+    toyboxpkgs.cargo
+    toyboxpkgs.clippy
+    toyboxpkgs.go
+    toyboxpkgs.google-cloud-sdk
+    toyboxpkgs.helm
+    toyboxpkgs.k9s
+    toyboxpkgs.mirror
+    toyboxpkgs.nodejs
+    toyboxpkgs.openjdk
+    toyboxpkgs.rustc
+    toyboxpkgs.skaffold
   ];
-
 
   ############################################################################
   ##                          Custom configuration                          ##
   ############################################################################
 
   home.file = {
-    # npm config
-    ".npmrc".source = config.file "config/.npmrc";
-
     # gnupg config
     ".gnupg/gpg.conf".text = ''
         default-key <fpr>

@@ -6,7 +6,7 @@ let
   ;
 in
 nixpkgs.mkShell rec {
-  name = "casa";
+  name = "release.casa";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
     # <toyboxpkgs>
