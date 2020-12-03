@@ -2,7 +2,7 @@
   branches: [
     "master", 
     "next", 
-    {name: "alpha", prerelease: true}
+    { name: "alpha", prerelease: true }
   ],
   plugins: [
     "@semantic-release/commit-analyzer",
