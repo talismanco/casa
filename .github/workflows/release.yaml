@@ -72,7 +72,7 @@ jobs:
     name: Merge
     needs: release
     runs-on: ubuntu-18.04
-    if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.base_ref == 'master' || github.base_ref == 'alpha')"
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     steps:
       - name: Checkout
         id: merge-1
