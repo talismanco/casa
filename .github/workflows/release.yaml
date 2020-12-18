@@ -5,13 +5,18 @@ on:
       - master
       - next
       - alpha
-      
+
 jobs:
   setup:
     name: Setup
     runs-on: ubuntu-18.04
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
     steps:
+
+      - name: Test
+        run: |
+          echo ${{ github.event.push.base.ref }}
+
       - name: Checkout
         id: setup-1
         uses: actions/checkout@v1
@@ -72,7 +77,7 @@ jobs:
     name: Merge
     needs: release
     runs-on: ubuntu-18.04
-    if: "!contains(github.event.commits[0].message, '[skip ci]')"
+    if: "!contains(github.event.commits[0].message, '[skip ci]') && (contains(github.ref, 'master') || contains(github.ref, 'alpha'))"
     steps:
       - name: Checkout
         id: merge-1
@@ -86,3 +91,5 @@ jobs:
           from_branch: ${{ github.base_ref }}
           target_branch: next
           github_token: ${{ github.token }}
+
+
