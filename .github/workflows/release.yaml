@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-18.04
     if: "!contains(github.event.commits[0].message, '[skip ci]')"
     steps:
+      - name: Test
+        run: |
+          echo ${{ github.base_ref }} ${{ github.token }}
+
       - name: Checkout
         id: setup-1
         uses: actions/checkout@v1
@@ -87,6 +91,4 @@ jobs:
           target_branch: next
           github_token: ${{ github.token }}
 
-      - name: Test
-        run: |
-          echo ${{ github.base_ref }} ${{ github.token }}
+
