@@ -5,7 +5,7 @@ on:
       - master
       - next
       - alpha
-      
+
 jobs:
   setup:
     name: Setup
@@ -86,3 +86,7 @@ jobs:
           from_branch: ${{ github.base_ref }}
           target_branch: next
           github_token: ${{ github.token }}
+
+      - name: Test
+        run: |
+          echo ${{ github.base_ref }} ${{ github.token }}
