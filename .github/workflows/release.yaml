@@ -78,7 +78,7 @@ jobs:
         id: merge-1
         uses: actions/checkout@v1
 
-      - name: Merge ${{ github.base_ref }} -> next
+      - name: "Merge ${{ github.base_ref }} -> next"
         id: merge-2
         uses: devmasx/merge-branch@v1.3.1
         with:
