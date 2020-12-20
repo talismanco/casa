@@ -12,7 +12,7 @@ nixpkgs.mkShell rec {
     # <toyboxpkgs>
     toyboxpkgs.jq_1_6
     toyboxpkgs.nodejs_12_18_3
-    toyboxpkgs.python_3_7_7
+    toyboxpkgs.python_3_7
     # <nixpkgs>
     # ...
   ];
