@@ -17,10 +17,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "647cc06986c1ae4a2bb05298e0cf598723e42970",
-        "sha256": "1n1sd5lbds08vxy8x9l94w0z8bbq39fh2rrr6mnq0rmhf4xb2mj1",
+        "rev": "7d57790bc12edaa8cbb76c38b28b59535492864e",
+        "sha256": "1pkms2l3fxhn4mpxmknkirbxzgvmhg5qz4mlgn12aqsn3mxf4ag4",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/647cc06986c1ae4a2bb05298e0cf598723e42970.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/7d57790bc12edaa8cbb76c38b28b59535492864e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "toyboxpkgs": {
@@ -29,10 +29,10 @@
         "homepage": "https://github.com/toyboxco/toyboxpkgs",
         "owner": "toyboxco",
         "repo": "toyboxpkgs",
-        "rev": "edf837f502a00d97e5bcd2a4e9c462c36c38ed02",
-        "sha256": "19y7k6yimgjy09j9nyq6bqm0qyw5xm3wibrv14qx89wp60z3hl3x",
+        "rev": "6433e45d797799f1ad6d4578601c2b49d71a4039",
+        "sha256": "1x22ynznj2q0fb0qfvgg4l9sf2c5rpz8fcdg7kdl1gcyizdz4cvy",
         "type": "tarball",
-        "url": "https://github.com/toyboxco/toyboxpkgs/archive/edf837f502a00d97e5bcd2a4e9c462c36c38ed02.tar.gz",
+        "url": "https://github.com/toyboxco/toyboxpkgs/archive/6433e45d797799f1ad6d4578601c2b49d71a4039.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
