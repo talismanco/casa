@@ -1,6 +1,6 @@
 # `casa` Development Docs
 
-Welcome to the [casa](https://github.com/toyboxco/casa), `development` documentation.
+Welcome to the [casa](https://github.com/talismanco/casa), `development` documentation.
 
 | Topic                         | Description                                                                                                |
 | :---------------------------- | :--------------------------------------------------------------------------------------------------------- |

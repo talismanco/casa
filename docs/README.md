@@ -1,6 +1,6 @@
 # `casa` Docs
 
-Welcome to the [casa](https://github.com/toyboxco/casa) documentation.
+Welcome to the [casa](https://github.com/talismanco/casa) documentation.
 
 ## Contributing to `casa`
 

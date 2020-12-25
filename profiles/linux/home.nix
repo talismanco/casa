@@ -19,7 +19,7 @@ rec {
   home.packages = with pkgs; [
     # <nixpkgs>
     # ...
-    # <toyboxpkgs>
+    # <talismanpkgs>
     # ...
   ];
 

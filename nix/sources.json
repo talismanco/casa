@@ -17,22 +17,22 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "2fbcd0b9df95306199407e36a038d2cc3aa24786",
-        "sha256": "1q51cc51vv02yibj6dwaqp7zv3pz1iqnbzlvmv2fks6pj58xv03w",
+        "rev": "ca119749d86f484066fae7680af8a44ea1f11ca8",
+        "sha256": "1mzcw6ia7q7j7pcfwn5ixhry5x0r29dvf5zjz3ip3fpkn7f72aj0",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/2fbcd0b9df95306199407e36a038d2cc3aa24786.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/ca119749d86f484066fae7680af8a44ea1f11ca8.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "toyboxpkgs": {
+    "talismanpkgs": {
         "branch": "master",
         "description": " Nix Packages collection",
-        "homepage": "https://github.com/toyboxco/toyboxpkgs",
-        "owner": "toyboxco",
-        "repo": "toyboxpkgs",
-        "rev": "6721b5471eeda3549408ccc6b2439e9ae3319c27",
-        "sha256": "1c48y51gg9727qysvx26hcplwcgnx0a35zgr5d5z1jvjspywqhvb",
+        "homepage": "https://github.com/talismanco/talismanpkgs",
+        "owner": "talismanco",
+        "repo": "talismanpkgs",
+        "rev": "6433e45d797799f1ad6d4578601c2b49d71a4039",
+        "sha256": "1x22ynznj2q0fb0qfvgg4l9sf2c5rpz8fcdg7kdl1gcyizdz4cvy",
         "type": "tarball",
-        "url": "https://github.com/toyboxco/toyboxpkgs/archive/6721b5471eeda3549408ccc6b2439e9ae3319c27.tar.gz",
+        "url": "https://github.com/talismanco/talismanpkgs/archive/6433e45d797799f1ad6d4578601c2b49d71a4039.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

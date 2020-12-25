@@ -7,7 +7,7 @@ declare -A organizations
 organizations[m]="misc"
 organizations[mir]="mirror"
 organizations[sc]="sam.craig"
-organizations[t]="toybox"
+organizations[t]="talisman"
 organizations[v]="vaynerx"
 
 # Navigate to the project in the designated organization,

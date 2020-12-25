@@ -50,19 +50,19 @@ rec {
     ngrok
     vault
     vimPlugins.vim-plug
-    # <toyboxpkgs>
-    toyboxpkgs.bazel
-    toyboxpkgs.cargo
-    toyboxpkgs.clippy
-    toyboxpkgs.go
-    toyboxpkgs.google-cloud-sdk
-    toyboxpkgs.helm
-    toyboxpkgs.k9s
-    toyboxpkgs.mirror
-    toyboxpkgs.nodejs
-    toyboxpkgs.openjdk
-    toyboxpkgs.rustc
-    toyboxpkgs.skaffold
+    # <talismanpkgs>
+    talismanpkgs.bazel
+    talismanpkgs.cargo
+    talismanpkgs.clippy
+    talismanpkgs.go
+    talismanpkgs.google-cloud-sdk
+    talismanpkgs.helm
+    talismanpkgs.k9s
+    talismanpkgs.mirror
+    talismanpkgs.nodejs
+    talismanpkgs.openjdk
+    talismanpkgs.rustc
+    talismanpkgs.skaffold
   ];
 
   ############################################################################

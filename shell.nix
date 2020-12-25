@@ -1,7 +1,7 @@
 { sources ? import ./nix {} }:
 let
   inherit (sources)
-    toyboxpkgs
+    talismanpkgs
     nixpkgs
   ;
 in
@@ -9,10 +9,10 @@ nixpkgs.mkShell rec {
   name = "casa";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-    # <toyboxpkgs>
-    toyboxpkgs.jq_1_6
-    toyboxpkgs.nodejs_12_18_3
-    toyboxpkgs.python_3_7_7
+    # <talismanpkgs>
+    talismanpkgs.jq_1_6
+    talismanpkgs.nodejs_12_18_3
+    talismanpkgs.python_3_7
     # <nixpkgs>
     # ...
   ];

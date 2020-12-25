@@ -1,7 +1,7 @@
 # MAKEFILE
 #
-# @author      Sam Craig <sam@toybox.ooo>
-# @link        https://github.com/toyboxco/casa
+# @author      Sam Craig <sam@talisman.dev>
+# @link        https://github.com/talismanco/casa
 # ------------------------------------------------------------------------------
 
 .EXPORT_ALL_VARIABLES:

@@ -1,6 +1,6 @@
 # `casa` Legal Docs
 
-Welcome to the [casa](https://github.com/toyboxco/casa), `legal` documentation.
+Welcome to the [casa](https://github.com/talismanco/casa), `legal` documentation.
 
 | Topic                                                                                   | Description                                |
 | :-------------------------------------------------------------------------------------- | :----------------------------------------- |
