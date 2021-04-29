@@ -1,0 +1,10 @@
+{
+	"project": {
+    "owner": "Talisman Consulting, LLC.",
+		"name": "casa",
+    "organization": "talismanco",
+    "repository": "https://github.com/talismanco/casa",
+    "version": "1.6.0",
+    "nixpkgs_channel": "nixos-20.09"
+	}
+}
