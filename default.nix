@@ -1,16 +1,17 @@
 rec {
-  file = f: ./. + "/${f}";
-  program = p: file "/programs/${p}";
+  file = file: ./. + "/${file}";
+  program = program: file "/programs/${program}";
 
   programs = {
+    fzf = program "fzf";
     git = program "git";
-    jq = program "jq";
     keychain = program "keychain";
     neovim = program "neovim";
     ssh = program "ssh";
     tmux = program "tmux";
+    zplug = program "zplug";
     zsh = program "zsh";
   };
 
-  pkgs = import ./nix {};
+  pkgs = import ./nix { };
 }

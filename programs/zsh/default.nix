@@ -1,41 +1,36 @@
-####### Configuration for Zsh ##################################################
-##                                                                            ##
-## * Setup `ZSH_DOTDIR` at `~/.config/zsh`                                    ##
-##                                                                            ##
-################################################################################
-
-{ lib
-, pkgs
-, ... }:
+{ lib, pkgs, ... }@args:
 
 let
-  inherit (builtins) 
-    readFile
-  ;
-  inherit (lib) 
-    mkDefault 
-    mkForce 
-    optionalString
-  ;
-  inherit (pkgs) 
-    stdenv
-  ;
-in
-rec {
+  inherit (builtins) readFile;
+in rec {
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    initExtraBeforeCompInit  = 
-      mkForce (
-        ''
-        if [ -z "$IN_NIX_SHELL" ]; then
-            source ${pkgs.antigen}/share/antigen/antigen.zsh
-            source $HOME/.nix-profile/etc/profile.d/nix.sh
-            export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
-        fi
-        '' +
-        readFile ./bin/init.zsh
-      );
-  };
 
+    zplug = {
+      enable = true;
+      plugins = [
+        { name = "zsh-users/zsh-autosuggestions"; }
+        { name = "zsh-users/zsh-completions"; }
+        { name = "zsh-users/zsh-syntax-highlighting"; }
+        { name = "spwhitt/nix-zsh-completions"; }
+        { name = "b4b4r07/enhancd"; }
+        { name = "supercrabtree/k"; }
+        { name = "fcambus/ansiweather"; }
+        { name = "chisui/zsh-nix-shell"; }
+        {
+          name = "arzzen/calc.plugin.zsh";
+          tags = [ "use:calc.plugin.zsh" ];
+        }
+        { name = "ikhurramraza/bol"; }
+        {
+          name = "romkatv/powerlevel10k";
+          tags = [ "as:theme" ];
+        }
+      ];
+    };
+
+    initExtraBeforeCompInit = readFile ./config/init-extra-before-comp-init.zsh;
+    loginExtra = readFile ./config/login-extra.zsh;
+  };
 }

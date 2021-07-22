@@ -1,56 +1,43 @@
-################################################################################
-##                                                                            ##
-##                         Common home configuration                          ##
-##                                                                            ##
-################################################################################
+# =================================
+# === Common Home Configuration ===
+# =================================
 
-{ lib
-, pkgs
-, ... }:
+{ lib, pkgs, ... }:
 
 let
-  inherit (builtins) 
-    readFile
-  ;
-  inherit (lib) 
-    mkDefault 
-    mkForce
-  ;
-
   config = import ../..;
-in
-rec {
-  # This value determines the NixOS release with which your system is to be
-  # compatible, in order to avoid breaking some software such as database
-  # servers. You should change this only after NixOS release notes say you
-  # should.
-  home.stateVersion = "19.03";
+in rec {
 
-  imports = with config.programs; [
-    git
-    jq
-    keychain
-    neovim
-    ssh
-    tmux
-    zsh
-  ];
+  # === Configuration ===
 
-  ############################################################################
-  ##                             User packages                              ##
-  ############################################################################
+  home.stateVersion = "20.09";
 
-  home.packages = with pkgs; with config.pkgs; [
+  home.file = {
+    # `zsh` config
+    ".config/zsh/config".source = config.file "programs/zsh/config";
+    ".config/zsh/config".recursive = true;
+    # `zsh` scripts
+    ".config/zsh/scripts".source = config.file "programs/zsh/scripts";
+    ".config/zsh/scripts".recursive = true;
+    # `zsh` themes
+    ".config/zsh/themes".source = config.file "programs/zsh/themes";
+    ".config/zsh/themes".recursive = true;
+  };
+
+  # === User Packages ===
+
+  home.packages = with config.pkgs; [
     # <nixpkgs>
-    act
-    antibody
-    direnv
-    gitAndTools.gh
-    gitAndTools.gitflow
-    glow
-    ngrok
-    vault
-    vimPlugins.vim-plug
+    nixpkgs.act
+    nixpkgs.antibody
+    nixpkgs.direnv
+    nixpkgs.gitAndTools.gh
+    nixpkgs.gitAndTools.gitflow
+    nixpkgs.glow
+    nixpkgs.ngrok
+    nixpkgs.nixfmt
+    nixpkgs.vault
+    nixpkgs.vimPlugins.vim-plug
     # <talismanpkgs>
     talismanpkgs.bazel
     talismanpkgs.cargo
@@ -58,6 +45,7 @@ rec {
     talismanpkgs.go
     talismanpkgs.google-cloud-sdk
     talismanpkgs.helm
+    talismanpkgs.jq
     talismanpkgs.k9s
     talismanpkgs.mirror
     talismanpkgs.nodejs
@@ -67,30 +55,16 @@ rec {
     talismanpkgs.skaffold
   ];
 
-  ############################################################################
-  ##                          Custom configuration                          ##
-  ############################################################################
+  # === Programs ===
 
-  home.file = {
-    # gnupg config
-    ".gnupg/gpg.conf".text = ''
-        default-key <fpr>
-      '' + readFile (config.file "config/gpg.conf");
+  imports = with config.programs; [ git fzf keychain neovim ssh tmux zsh ];
 
-    # zsh aliases, environments, themes & functions
-    ".config/zsh/lib".source = config.file "programs/zsh/lib";
-  };
+  programs.home-manager = { enable = true; };
 
-  programs.home-manager = {
+  # === Services ===
+
+  services.lorri = {
     enable = true;
-  };
-
-  ############################################################################
-  ##                                 Services                               ##
-  ############################################################################
-
-  services = {
-    lorri.enable = true;
-    keybase.enable = true;
+    package = config.pkgs.nixpkgs.lorri;
   };
 }
