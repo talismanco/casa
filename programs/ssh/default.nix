@@ -1,33 +1,13 @@
-####### Configuration for SSH ##################################################
-##                                                                            ##
-## * Enable compression                                                       ##
-## * Append default configurations via `./config/config                       ##
-##                                                                            ##
-################################################################################
-
-{ lib
-, pkgs
-, ... }:
+{ lib, pkgs, ... }:
 
 let
-  inherit (builtins) 
-    readFile
-  ;
-  inherit (lib) 
-    mkDefault 
-    mkForce 
-    optionalString
-  ;
-  inherit (pkgs) 
-    stdenv
-  ;
+  inherit (builtins) readFile;
 
   config = import ../..;
-in
-rec {
+in rec {
   programs.ssh = {
-    enable = true; 
-    compression = mkDefault true;
-    extraConfig = mkDefault (readFile (config.file "config/ssh.conf"));
+    enable = true;
+    compression = true;
+    extraConfig = (readFile (config.file "config/ssh.conf"));
   };
 }

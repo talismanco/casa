@@ -1,26 +1,14 @@
-####### Configuration for Neovim ##################################################
-##                                                                               ##
-## * Enable `vi` & `vim` aliases                                                 ##
-## * Initiate .vimrc via `config/vimrc`                                          ##
-##                                                                               ##
-###################################################################################
+{ lib, pkgs, ... }:
 
-{ config, lib, pkgs, ... }:
-
-let
-  inherit (builtins) readFile;
-  inherit (lib) mkDefault;
-
-  plugins = pkgs.vimPlugins // pkgs.callPackage ./plugins.nix {};
-in 
-rec {
+let inherit (builtins) readFile;
+in rec {
   programs.neovim = {
     enable = true;
-    viAlias = mkDefault true;
-    vimAlias = mkDefault true;
+    viAlias = true;
+    vimAlias = true;
     configure = {
       customRC = readFile ./config/vimrc;
-      plug.plugins = with plugins; [];
+      plug.plugins = with pkgs.vimPlugins; [ ];
     };
   };
 }

@@ -7,7 +7,10 @@ let
 in
 nixpkgs.mkShell rec {
   name = "casa";
-  env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
+  env = nixpkgs.buildEnv { 
+    name = name; 
+    paths = buildInputs;
+  };
   buildInputs = [
     # <talismanpkgs>
     talismanpkgs.jq_1_6

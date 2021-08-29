@@ -1,33 +1,27 @@
-################################################################################
-##                                                                            ##
-##                   Home configuration for user@linux                        ##
-##                                                                            ##
-################################################################################
+# ================================
+# === Linux Home Configuration ===
+# ================================
 
-{ config
-, lib
-, pkgs
-, ... }:
+{ config, lib, pkgs, ... }:
 
-let
-  config = import ../..;
-in
-rec {
+let config = import ../..;
+in rec {
   imports = [ ../common/home.nix ];
 
-  # Linux specific packages.
-  home.packages = with pkgs; [
-    # <nixpkgs>
-    # ...
-    # <talismanpkgs>
-    # ...
-  ];
+  # === User Packages ===
 
-  ############################################################################
-  ##                          Program Overrides                             ##
-  ############################################################################
+  home.packages = with config.pkgs;
+    [
+      # <nixpkgs>
+      # ...
+      # <talismanpkgs>
+      # ...
+    ];
 
-  programs.git = {
-    extraConfig.credential.helper = "store";
-  };
+  # === Programs ===
+
+  programs.git = { extraConfig.credential.helper = "store"; };
+
+  # === Services ===
+
 }
