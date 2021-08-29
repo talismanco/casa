@@ -8,11 +8,6 @@ let config = import ../..;
 in rec {
   imports = [ ../common/home.nix ];
 
-  # === Configuration ===
-
-  home.username = "sam";
-  home.homeDirectory = "/home/sam";
-
   # === User Packages ===
 
   home.packages = with config.pkgs;

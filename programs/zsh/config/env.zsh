@@ -12,6 +12,8 @@ export EDITOR=$VISUAL
 export SSH_DIR=$HOME/.ssh
 export IDENTITIES_DIR=$HOME/.identities
 
+echo "ASDASDASDADS"
+
 # Non `nix-shell` variables
 if [ -z "$IN_NIX_SHELL" ]; then
     export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
